@@ -2,8 +2,7 @@ import React from "react";
 import { StyleSheet, View, FlatList } from "react-native";
 
 import Screen from "../components/Screen";
-import ListItem from "../components/ListItem";
-import ListItemSeparatorComponent from "../components/ListItemSeparator";
+import { ListItem, ListItemSeparator } from "../components/lists";
 import colors from "../config/colors";
 import Icon from "../components/Icon";
 
@@ -30,7 +29,7 @@ function AccountScreen(props) {
       <View style={styles.container}>
         <ListItem
           title="Gurveen Singh"
-          subTitle="gurveen@gmail.com"
+          subTitle="gurveensingh100@gmail.com"
           image={require("../assets/DP.jpg")}
         />
       </View>
@@ -38,7 +37,7 @@ function AccountScreen(props) {
         <FlatList
           data={menuItems}
           keyExtractor={(menuItem) => menuItem.title}
-          ItemSeparatorComponent={ListItemSeparatorComponent}
+          ItemSeparatorComponent={ListItemSeparator}
           renderItem={({ item }) => (
             <ListItem
               title={item.title}
