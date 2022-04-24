@@ -1,0 +1,11 @@
+{
+  "exclude": [
+    "node_modules",
+    "build",
+    "dist",
+    "docs",
+    "scripts",
+    "test",
+    "typings"
+  ]
+}

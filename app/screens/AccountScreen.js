@@ -1,10 +1,10 @@
 import React from "react";
 import { StyleSheet, View, FlatList } from "react-native";
 
-import Screen from "../components/Screen";
 import { ListItem, ListItemSeparator } from "../components/lists";
 import colors from "../config/colors";
 import Icon from "../components/Icon";
+import Screen from "../components/Screen";
 
 const menuItems = [
   {
@@ -29,7 +29,7 @@ function AccountScreen(props) {
       <View style={styles.container}>
         <ListItem
           title="Gurveen Singh"
-          subTitle="gurveensingh100@gmail.com"
+          subTitle="gurveensingh@gmail.com"
           image={require("../assets/DP.jpg")}
         />
       </View>

@@ -11,15 +11,16 @@ import {
 const initialMessages = [
   {
     id: 1,
-    title: "T1",
-    description: "D1",
+    title: "Gurveen Singh",
+    description: "Hey! Is this item still available?",
     image: require("../assets/DP.jpg"),
   },
   {
     id: 2,
-    title: "T2",
-    description: "D2",
-    image: require("../assets/DP.jpg"),
+    title: "Gurleen",
+    description:
+      "I'm interested in this item. When will you be able to post it?",
+    image: require("../assets/jacket.jpg"),
   },
 ];
 
