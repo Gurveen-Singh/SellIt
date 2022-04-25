@@ -1,17 +1,7 @@
-import React, { useState } from "react";
+import React from "react";
 
-import Screen from "./app/components/Screen";
-import ImageInput from "./app/components/ImageInput";
+import ListingEditScreen from "./app/screens/ListingEditScreen";
 
 export default function App() {
-  const [imageUri, setImageUri] = useState(null);
-
-  return (
-    <Screen>
-      <ImageInput
-        imageUri={imageUri}
-        onChangeImage={(uri) => setImageUri(uri)}
-      />
-    </Screen>
-  );
+  return <ListingEditScreen />;
 }
