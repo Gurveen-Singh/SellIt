@@ -1,35 +1,41 @@
-import React from "react";
-import { View, StyleSheet, TouchableOpacity } from "react-native";
+import React from "react"
+import { StyleSheet } from "react-native"
+import { TouchableOpacity, View } from "react-native"
 
-import Icon from "./Icon";
-import Text from "./Text";
+import Text from "./Text"
+import Icon from "./Icon"
 
-function CategoryPickerItem({ item, onPress }) {
-  return (
-    <View style={styles.container}>
-      <TouchableOpacity onPress={onPress}>
-        <Icon
-          backgroundColor={item.backgroundColor}
-          name={item.icon}
-          size={80}
-        />
-      </TouchableOpacity>
-      <Text style={styles.label}>{item.label}</Text>
-    </View>
-  );
+const PickerItem = ({ item, onPress }) => {
+    return (
+        <TouchableOpacity style={styles.wrapper} onPress={onPress}>
+            <View style={styles.container}>
+                <Icon
+                    name={item.icon}
+                    backgroundColor={item.backgroundColor}
+                    size={80}
+                />
+                <Text style={styles.text} numberOfLines={1}>
+                    {item.label}
+                </Text>
+            </View>
+        </TouchableOpacity>
+    )
 }
 
 const styles = StyleSheet.create({
-  container: {
-    paddingHorizontal: 30,
-    paddingVertical: 15,
-    alignItems: "center",
-    width: "33%",
-  },
-  label: {
-    marginTop: 5,
-    textAlign: "center",
-  },
-});
+    container: {
+        paddingHorizontal: "6%",
+        paddingVertical: "6%",
+        alignItems: "center",
+    },
+    text: {
+        marginTop: 6,
+        textAlign: "center",
+        flexWrap: "nowrap",
+    },
+    wrapper: {
+        width: "33%",
+    },
+})
 
-export default CategoryPickerItem;
+export default PickerItem

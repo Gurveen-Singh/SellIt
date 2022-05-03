@@ -1,12 +1,12 @@
-import React from "react";
-import { useFormikContext } from "formik";
+import React from "react"
+import { useFormikContext } from "formik"
 
-import Button from "../Button";
+import Button from "../Button"
 
-function SubmitButton({ title }) {
-  const { handleSubmit } = useFormikContext();
+const SubmitButton = ({ title, ...otherProps }) => {
+    const { handleSubmit } = useFormikContext()
 
-  return <Button title={title} onPress={handleSubmit} />;
+    return <Button title={title} onPress={handleSubmit} {...otherProps} />
 }
 
-export default SubmitButton;
+export default SubmitButton
