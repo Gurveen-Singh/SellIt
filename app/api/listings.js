@@ -21,7 +21,6 @@ const addListing = (listing, onUploadProgress) => {
       uri: image,
     })
   );
-
   if (location) data.append("location", JSON.stringify(location));
 
   return client.post(endpoint, data, {

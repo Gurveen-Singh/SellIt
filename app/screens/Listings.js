@@ -1,12 +1,11 @@
 import React from "react";
 import { StyleSheet, FlatList } from "react-native";
 
-import { useApi } from "../hooks";
-
 import ActivityIndicator from "../components/ActivityIndicator";
 import Button from "../components/Button";
 import colors from "../config/colors";
 import Card from "../components/Card";
+import { useApi } from "../hooks";
 import listingsApi from "../api/listings";
 import Routes from "../navigation/routes";
 import Text from "../components/Text";
@@ -14,7 +13,6 @@ import Wrapper from "../components/Wrapper";
 
 const Listings = ({ navigation }) => {
   const { data, error, loading, request } = useApi(listingsApi.getListings);
-
   return (
     <Wrapper style={styles.container}>
       {error && (
@@ -31,6 +29,7 @@ const Listings = ({ navigation }) => {
           <Card
             imageUrl={item.images[0].url}
             onPress={() => navigation.navigate(Routes.LISTING_DETAILS, item)}
+            thumbnailUrl={item.images[0].thumbnail}
             title={item.title}
             subTitle={item.price}
           />
